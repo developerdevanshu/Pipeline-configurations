@@ -1,0 +1,12 @@
+version: 0.2
+
+phases:
+  build:
+    commands:
+      - echo "Creating appspec file"
+      - cp -rvf deployment-scripts/appspec-stage-api.yml appspec.yml
+      - ls -lrth
+
+artifacts:
+  files:
+    - '**/*'
