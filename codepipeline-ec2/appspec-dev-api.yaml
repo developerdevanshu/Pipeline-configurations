@@ -1,0 +1,10 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /var/www/html/dev-api
+hooks:
+  AfterInstall:
+    - location: deployment-scripts/dev-api.sh
+      timeout: 300
+      runas: ec2-user
